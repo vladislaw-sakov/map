@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript">
+        locations = {{{rawLocations}}};
+    </script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANCTeGpcn0lgE67jxdmRTDyTfZ3hg0Qpk">
+    </script>
+    <script type="text/javascript">
+        function initialize() {
+            var initLat = 40.70728047983459;
+            var initLong = -74.01194394403203;
+            if( locations && locations.length ) {
+                var initObj = locations[0];
+                initLat = initObj.hasOwnProperty( "latitude" ) ? initObj.latitude : initLat;
+                initLong = initObj.hasOwnProperty( "longitude" ) ? initObj.longitude : initLong;
+            } else {
+                alert( "No locations for this user." );
+            }
+            var mapOptions = {
+                center: new google.maps.LatLng(initLat, initLong),
+                zoom: 14
+            };
+            var map = new google.maps.Map(document.getElementById("map-canvas"),
+                    mapOptions);
+
+            for( var i = 0; i < locations.length; i++ ) {
+                var location = locations[i];
+                var curLatLong = new google.maps.LatLng( location.latitude, location.longitude );
+                // To add the marker to the map, use the 'map' property
+                var locationTime = location.at;
+                var dateString = new Date( locationTime * 1000 ).toString();
+                var marker = new google.maps.Marker({
+                    position: curLatLong,
+                    map: map,
+                    title:dateString
+                });
+                marker.setMap(map);
+            }
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body>
+<div id="map-canvas"/>
+</body>
+</html>

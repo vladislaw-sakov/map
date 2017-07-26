@@ -1,0 +1,1029 @@
+/*
+Website Name: Swellist
+Description: Get a continuous stream of personalized tips to help with your to-dos
+Author: Simple Labs Inc.
+URI: http://www.swellist.com/
+Tags: Swellist, Responsive, Website, Landing Page
+*/
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+.swellist-logo {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-shadow: rgba(0, 0, 0, 0.309804) 0px 1px 1px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(95, 207, 182);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto .5em auto;
+}
+
+h2 {
+    color: #9B9B9B;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+    padding: 9rem 0 12rem;
+    text-align: center;
+}
+
+.section-heading,
+.section-description {
+    margin-bottom: 1.2rem;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.home-header {
+    left: 0px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-item {
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1em 1.5em;
+    color: rgb(255, 255, 255) !important;
+    display: inline-block;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 23px 0;
+    width: 100%;
+}
+
+.navbar-left {
+    visibility: hidden;
+    display: none;
+}
+.navbar-right {
+    display: none;
+}
+
+.navbar-logo {
+    text-align: center;
+}
+
+.signup {
+    margin: 0 2em;
+    background-color: rgb(95, 207, 182);
+    padding: .6em 1.5em;;
+    -webkit-border-radius: 20px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.signup:hover {
+    color: rgb(95, 207, 182) !important;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px rgb(95, 207, 182);
+    cursor: pointer;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hero {
+    background-size: cover;
+    background-position: center center;
+}
+.adventurousImg {
+    background-image: url('http://static.swellist.com/images/hero-assets/adventurous-background.png');
+}
+.athleticImg {
+    background-image: url('http://static.swellist.com/images/hero-assets/athetic_background.png');
+}
+.romanticImg {
+    background-image: url('http://static.swellist.com/images/hero-assets/romantic-background.png');
+}
+.thoughtfulImg {
+    background-image: url('http://static.swellist.com/images/hero-assets/thoughtful-background.png');
+}
+.playfulImg {
+    background-image: url('http://static.swellist.com/images/hero-assets/playful-back-2x.png');
+}
+
+.hero h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.15);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 400; 
+    visibility: visible;
+}
+
+h4.hero-heading {
+    font-family: "Lora", Georgia, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.15);
+    font-size: 2.0rem;
+    line-height: 30px;
+    margin-bottom: 4.0rem;
+}
+
+#hero-adventure, #hero-athlete, #hero-romance, #hero-thought, #hero-playful {
+    font-family: "Lora", Georgia, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.15);
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 5.0rem;
+    line-height: 50px;
+    letter-spacing: 2.4px;
+}
+
+.phones {
+    position: relative;
+}
+
+.phone {
+    position: relative;
+    max-width: 80%;
+    margin: 3rem auto -8rem;
+}
+
+.phone + .phone {
+    display: none;
+}
+
+/* Sticky Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.site-header {
+    display: none;
+    height: 0;
+    padding: 1em 0;
+    margin: 0 0 1em 0;
+}
+
+header.sticky-nav {
+    height: 100px;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 1px 2px rgba(68, 68, 68, 0.35); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 0px 1px 2px rgba(68, 68, 68, 0.35); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 1px 2px rgba(68, 68, 68, 0.35); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    text-align: center;
+}
+
+header.sticky-nav nav ul li {
+    display: inherit;
+    margin: 1.5rem .75rem 0rem
+}
+
+.nav-vert-item {
+    display: none;
+}
+
+header li.signup {
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5em 3em;
+    color: rgb(255, 255, 255) !important;
+}
+
+.nav-logo {
+    color: rgb(155, 155, 155);
+    font-size: 18px;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+a.nav-logo:hover {
+    color: rgb(95, 207, 182);
+    border-bottom: 2px solid rgb(95, 207, 182);
+}
+
+/* Div Backgrounds
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.gray-background {
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+    padding: 2rem !important;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+.white-background {
+    padding: 2rem !important;
+    background-color: #ffffff;
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+    text-align: center;
+}
+
+/* Intro
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#intro {
+    text-align: center;
+}
+
+.intro-head {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(95, 207, 182);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+}
+
+.values {
+    background-color: gray;
+    background-size: cover;
+    color: #fff;
+    padding-bottom: 5rem;
+}
+
+.value-multiplier {
+    margin-bottom: .5rem;
+    color: #11DFC7;
+}
+
+.value-heading {
+    margin-bottom: .3rem;
+}
+
+.value-description {
+    opacity: .8;
+    font-weight: 300;
+}
+
+/* Scrollable Phone
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.web-how-we-do {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.mobile-how-we-do {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-how-we-do button.button-inverse {
+    margin-bottom: 4em;
+}
+
+div#scrollable-phone h2 {
+    margin-bottom: 6rem;
+    margin-top: 4rem;
+}
+
+.subtitle {
+    font-weight: 400;
+    margin: 0 0 .5em 0;
+    text-align: center;
+    color: rgb(60, 60, 60);
+    font-size: 1.7rem;
+    font-family: "Lora", Georgia, serif;
+}
+
+/* Step By Step
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.step-by-step-list li {
+    display: block;
+    width: 100%;
+    margin-bottom: 4em;
+}
+
+.step-by-step-list img {
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    color: rgb(60, 60, 60);
+    font-size: 17px;
+    margin-top: 20px;
+    margin-bottom: 0.5em;
+    font-family: "Lora", Georgia, serif;
+    line-height: 22px;
+}
+
+.step-title-web {
+    display: none;
+}
+
+.step-title-mobile {
+    display: block;
+    color: #9b9b9b;
+    text-transform: uppercase;
+}
+
+.step1 {
+    animation-delay: 200ms;
+}
+
+.step2 {
+    animation-delay: 400ms;
+}
+
+.step3 {
+    animation-delay: 600ms;
+}
+
+/* Carousel
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+div#carousel h2 {
+    margin-bottom: 6rem;
+    margin-top: 4rem;
+}
+
+.last-div {
+    margin-bottom: 0 !important;
+}
+
+.owl-carousel {
+    display: none;
+    position: relative;
+    width: 90%;
+    -ms-touch-action: pan-y;
+    margin: auto;
+}
+
+.owl-controls {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    text-align: center;
+}
+
+.owl-item {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    float: left;
+}
+
+.item img {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 0 auto 0 auto;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+}
+
+.item p {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.owl-page {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+}
+
+.owl-wrapper {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    display: none;
+    position: relative;
+}
+
+.owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel h6 {
+    color: rgb(83, 83, 83);
+    margin: 2em 0 2em 0;
+    text-transform: uppercase;
+}
+
+.owl-carousel p {
+    text-align: center;
+}
+
+.owl-carousel .subtitle {
+    text-align: center;
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+    background: #4a4a4a;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 40px 40px 150px 40px;
+    z-index: 1;
+}
+
+.download-button {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em !important;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.download-button a {
+    margin-bottom: 1em;
+}
+
+footer ul {
+    margin: 0 0 1.5em 0;
+    padding-left: 0;
+    clear: both;
+    text-align: center;
+}
+
+footer li {
+    font-size: 13px;
+    display: inline;
+    margin: 0.7em;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+.twitter {
+    background: url("/images/swellist/twitter-icon-white.svg") no-repeat center center;
+    height: 24px;
+    width: 24px;
+    text-indent: -9999px;
+    margin: 10px 10px 0px 0px;
+    cursor: pointer;
+    color: transparent;
+}
+
+.facebook {
+    background: url("/images/swellist/facebook-icon-white.svg") no-repeat center center;
+    height: 22px;
+    width: 22px;
+    text-indent: -9999px;
+    margin: 10px 10px 0px 10px;
+    color: transparent;
+}
+
+.pinterest {
+    background: url("/images/swellist/pinterest-icon-white.svg") no-repeat center center;
+    height: 22px;
+    width: 22px;
+    text-indent: -9999px;
+    margin: 10px 0px 0px 10px;
+    cursor: pointer;
+    color: transparent;
+}
+
+/* Animations
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.slideUp {
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;
+
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+
+    visibility: visible !important;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(-8%);
+    }
+    65% {
+        transform: translateY(4%);
+    }
+    80% {
+        transform: translateY(-4%);
+    }
+    95% {
+        transform: translateY(2%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(100%);
+    }
+    50% {
+        -webkit-transform: translateY(-8%);
+    }
+    65% {
+        -webkit-transform: translateY(4%);
+    }
+    80% {
+        -webkit-transform: translateY(-4%);
+    }
+    95% {
+        -webkit-transform: translateY(2%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+    .section {
+        padding: 9rem 0 12rem !important;
+        text-align: center;
+    }
+}
+
+/* Larger than phablet (also point when grid becomes active) - Bigger than 550 */
+@media (min-width: 550px) {
+
+    /* Hero and Header
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .nav {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        align-items: center;
+        padding: 0 0 23px 0;
+        width: 100%;
+    }
+    .navbar-left {
+        visibility: visible;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .navbar-left >.nav-item {
+        padding-left: 3.5em;
+    }
+
+    .navbar-right {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+
+    .nav-container {
+        width: 100% !important;
+        max-width: 1400px !important;
+    }
+
+    .nav-item {
+        padding: 0px;
+    }
+
+    .section {
+        padding: 12rem 0 11rem;
+    }
+
+    .hero {
+        padding-bottom: 24rem;
+        text-align: left !important;
+        height: 165px;
+    }
+
+    h4.hero-heading {
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 3.0rem;
+        visibility: visible;
+    }
+
+    .hero a.button {
+        float: left;
+    }
+
+    .phone {
+        position: absolute;
+        top: -7rem;
+        right: 3rem;
+        max-height: 362px;
+        z-index: 3;
+    }
+
+    .phone + .phone {
+        top: -6rem;
+        display: block;
+        max-width: 73.8%;
+        right: 0;
+        z-index: 2;
+        max-height: 338px;
+    }
+
+    .hero-heading {
+        font-size: 2.0rem;
+        line-height: 30px;
+    }
+
+    .hero-container {
+        width: 90% !important;
+    }
+
+    .hero h1 {
+        text-align: left;
+    }
+
+    #hero-adventure {
+        animation: 5s fadeIn;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+    }
+    #hero-athlete {
+        animation: 5s fadeIn;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+        animation-delay: 5s;
+    }
+    #hero-romance {
+        animation: 5s fadeIn;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+        animation-delay: 10s;
+    }
+    #hero-thought {
+        animation: 5s fadeIn;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+        animation-delay: 15s;
+    }
+    #hero-playful {
+        animation: 5s fadeIn;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+        animation-delay: 20s;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+
+    /* Sticky Nav
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    header.sticky-nav nav {
+        padding-top: 2rem;
+    }
+
+    header.sticky-nav nav ul {
+        padding-left: 0;
+        margin: 0.5em 0;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 1.5rem .75rem 0rem;
+    }
+
+    .nav-vert-item {
+        display: inline;
+        color: rgb(155, 155, 155);
+        letter-spacing: 1px;
+        line-height: 42px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    a.nav-vert-item:hover {
+        color: rgb(95, 207, 182);
+        border-bottom: 2px solid rgb(95, 207, 182);
+    }
+
+    .nav-logo {
+        line-height: 42px;
+        white-space: nowrap;
+        margin-right: 1em;
+    }
+
+    a.nav-logo:hover {
+        color: rgb(95, 207, 182);
+        border-bottom: 2px solid rgb(95, 207, 182);
+    }
+
+    header li.signup {
+        padding: .7em 1.7em;
+    }
+
+    /* Scrollable Phone
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .web-how-we-do {
+        display: inline;
+        height: 100%;
+        width: 100%;
+    }
+
+    .mobile-how-we-do {
+        height: 0;
+        width: 0;
+        display: none;
+    }
+
+    .how-we-do {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin: 3em auto 6em auto !important;
+        max-width: 1800px;
+    }
+
+    .to-do-list-group {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    .sample-list {
+        padding-top: 1px;
+    }
+
+    .sample-list h2 {
+        color: rgb(83, 83, 83) !important;
+        margin: 35px 0 35px 0 !important;
+        text-align: left;
+    }
+
+    .sample-list-list {
+        padding: 0 !important;
+        -webkit-padding-start: 0 !important;
+        margin: 0 !important;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+    }
+
+    .sample-list-list li {
+        font-family: 'Lora', serif;
+        font-size: 17px;
+        color: #878787 !important;
+        list-style-type: none;
+        text-align: left;
+        line-height: 30px;
+        list-style-position: outside;
+        padding: 0;
+        margin-bottom: 25px;
+    }
+
+    .user-icon {
+        padding-right: 22px;
+    }
+
+    .phone-fixed {
+        height: 500px;
+    }
+
+    .phone-holder {
+        background: url("/images/swellist/iphone.png") no-repeat center center;
+        height: 552px;
+        width: 270px;
+        cursor: url("/images/swellist/scroll-new2.ico"), auto;
+    }
+
+    .phone-scroll {
+        position: relative;
+        top: 77px;
+        left: 24px;
+        overflow: scroll;
+        height: 396px;
+        width: 226px;
+    }
+
+    .phone-inner {
+        background: url("http://static.swellist.com/images/updated-feed-1x.png") no-repeat center top;
+        width: 224px;
+        height: 5315px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .phone-overlay {
+        width: 226px;
+        height: 396px;
+        background-color: rgba(74, 74, 74, .6);
+        color: white;
+    }
+
+    .phone-overlay img {
+        margin: 0 !important;
+        padding-top: 290px;
+    }
+
+    .phone-overlay h3 {
+        margin: 0;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    /* Step By Step
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .step-by-step-list {
+        overflow: auto;
+    }
+
+    .step-title-web {
+        display: block;
+        color: #9b9b9b;
+        text-transform: uppercase;
+    }
+
+    .step-title-mobile {
+        display: none;
+    }
+
+    .step-by-step-list {
+        margin: 0 auto;
+        padding: 0 1em;
+        margin-bottom: 4em;
+        text-align: center;
+    }
+
+    .step-by-step-list img {
+        width: 80%;
+        margin: 3rem 0;
+    }
+
+}
+
+/* Larger than tablet - Bigger than 750 */
+@media (min-width: 750px) {
+    /* Hero and Nav*/
+    .hero {
+        height: 190px;
+    }
+
+    .hero-heading {
+        font-size: 2.0rem;
+        line-height: 30px;
+    }
+
+    .section {
+        padding: 14rem 0 15rem;
+    }
+
+    .hero {
+        padding: 25rem 0 23rem;
+    }
+
+    .section-description {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .phone {
+        top: -14rem;
+        right: 5rem;
+        max-height: 510px;
+    }
+
+    .phone + .phone {
+        top: -12rem;
+        max-height: 472px;
+    }
+
+    .categories {
+        padding: 15rem 0 8rem;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 1.5rem .75rem 0rem;
+    }
+
+    /* Step by Step */
+    .container .white-background {
+        width: 100%
+    }
+
+    .step-by-step-list {
+        margin: 0 auto;
+        padding: 0 1em;
+        text-align: center;
+    }
+
+    .step-by-step-list img {
+        width: 75%;
+    }
+
+}
+
+/* Larger than desktop - Bigger than 1000 */
+@media (min-width: 1000px) {
+    .section {
+        padding: 20rem 0 19rem;
+    }
+
+    .hero {
+        padding: 23rem 0 23rem;
+    }
+
+    .hero-heading {
+        font-size: 2.0rem;
+        line-height: 30px;
+    }
+
+    .phone {
+        top: -14rem;
+        right: 5rem;
+        max-height: 510px;
+    }
+
+    .phone + .phone {
+        top: -12rem;
+        max-height: 472px;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 0 1.5em;
+    }
+
+    .step-by-step-list {
+        margin: 0 auto;
+        padding: 0 1em;
+        text-align: center;
+    }
+
+    .step-by-step-list img {
+        width: 60%;
+    }
+
+    #step-by-step {
+        max-width: 2000px !important;
+    }
+
+    #carousel {
+        max-width: 2000px !important;
+    }
+
+    .nav-item {
+        padding: 0 15px 0 0;
+    }
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+    #carousel {
+        max-width: 2800px !important;
+    }
+}

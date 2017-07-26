@@ -1,0 +1,207 @@
+.tipBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding:0;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.75);
+    margin-bottom: 1em;
+    border-radius: 3px;
+}
+
+/* Tip and custom tiles  */
+.tipType {
+    align-self: flex-start;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 16px !important;
+    padding-bottom: 5px !important;
+}
+.tipFraming {
+    align-self: flex-start;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-bottom: 8px !important;
+    margin: 0 !important;
+}
+.tipBox hr{
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #e4e4e4, #ccc);
+    width: 100%;
+    margin: 0;
+}
+.tipHeading {
+    align-self: flex-start;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    margin: 0 !important;
+}
+.tipText{
+    align-self: flex-start;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 0 !important;
+    padding-bottom: 16px !important;
+}
+.linkButton{
+    margin-bottom: 16px !important;
+}
+.heart img{
+    max-width: 25px !important;
+    margin-top:16px;
+    margin-right: 16px;
+}
+.tipHeader {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.tipHead-right {
+    align-self: center;
+    margin-right: 16px;
+}
+.tipbox img {
+    border: 0;
+    max-width: 100%;
+    height: auto !important;
+    max-height: 367px;
+    margin-bottom: 8px;
+}
+/* Video Tiles */
+.tipVideo {
+    width: 100%;
+    height: auto;
+    min-height: 210px;
+}
+
+/* System Tiles: Typeform, Link, No-Link */
+
+.tileImg {
+    max-width: 100%;
+    height: auto !important;
+    max-height: 300px;
+}
+.tileTitle{
+    padding-bottom: 16px !important;
+    margin: 0 !important;
+}
+.tileText{
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+    margin: 0 !important;
+}
+.tileFraming {
+    color: #4A4A4A;
+    font-size: 15px;
+    font-family: 'Crimson-Text';
+    font-style: italic;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-bottom: 8px !important;
+}
+
+
+/* RESIDUAL STYLES */
+.tipTitle {
+    color: #4A4A4A !important;
+    font-family : 'Montserrat';
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 15px;
+    padding-top: 16px;
+}
+p.framing {
+    color: #4A4A4A !important;
+    font-size: 15px;
+    font-family: Crimson-Text;
+    font-style: italic;
+    padding-top: 16px;
+}
+.Tip-header{
+    display: flex;
+    align-content: center;
+}
+.Tip-header h3{
+    color: #5D3B56;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align:center;
+    border-bottom: solid #5D3B56;
+    width: 100%;
+}
+.internalText{
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.tipBox img.call-to-action{
+    padding-top: 24px;
+}
+.tipBox .tipIcon {
+    width: 50px !important;
+    height: 50px !important;
+    margin: auto;
+}
+.tipBox h2{
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    margin: 0 !important;
+}
+.tipBox p{
+    font-family: "Crimson Text", Georgia, Times, "Times New Roman", serif;
+    padding: 0;
+    margin: 0 !important;
+    word-wrap: break-word;
+}
+.tipBox a {
+    text-decoration: none;
+    color: #0d0d0d;
+}
+.tipBox a:focus,
+a:hover {
+    border-bottom: none;
+}
+.tipBox .Button {
+    position: absolute;
+    left: 50%;
+    margin-left: -3em;
+    margin-bottom: 3em;
+}
+.heart-hide {
+    visibility: hidden;
+}
+.heart-show {
+    visibility: visible;
+    max-height: 23px !important;
+}
+.publish-time-label {
+    width: 100px !important;
+    height: 34px;
+    line-height: 21px !important;
+    float: left;
+}
+
+/* END TIP VIEW */
+
+/* Ratings Bar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.tipFooter {
+    width: 100%;
+    border-top: 1px solid #e1e1e1;
+}
+.ratings-bar {
+    height: 48px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #e1e1e1;
+}
+.ratings-bar img {
+    max-height: 24px;

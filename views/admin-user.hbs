@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+    <script type="text/javascript">
+        currentUid = {{uid}};
+    </script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<div id="topnav">
+    <a id="logo" href="/">Swell - CS Tools</a>
+    <a id="signout" href="/logout">Sign Out</a>
+</div>
+<div id="user-page-container">
+    <div id="content-container" class="container">
+        <a href="/user/{{uid}}/feeddashboard">Swellist Dashboard</a></br>
+        <a href="/user/{{uid}}/tasksdashboard">All Tasks Dashboard</a></br>
+        <a href="/persistence/read/UserEmail/{{uid}}">User Email</a></br>
+        <a href="/persistence/read/UserProfile/{{uid}}">Profile</a></br>
+        <a href="/user/{{uid}}/tasklist">Tasklist</a></br>
+        <a href="/user/{{uid}}/locations">Locations</a></br>
+        <a href="/persistence/read/Facebook/{{uid}}">Facebook Data</a></br>
+        <a href="/user/{{uid}}/wunderlist">Wunderlist Dashboard</a></br>
+        <a href="/user/{{uid}}/typeform/EPf23h">Wunderlist Onboarding Response</a></br>
+        <a href="/user/{{uid}}/typeform/EL7VfM">Wunderlist Megaquiz Response</a></br>
+    </div>
+</div>
+</body>
+</html>

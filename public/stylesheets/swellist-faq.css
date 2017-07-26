@@ -1,0 +1,453 @@
+/*
+Website Name: Swellist - How
+Description: Get a continuous stream of personalized tips to help with your to-dos
+Author: Simple Labs Inc.
+URI: http://www.swellist.com/
+Tags: Swellist, Responsive, Website, Landing Page
+*/
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+.swellist-logo {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-shadow: rgba(0, 0, 0, 0.309804) 0px 1px 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(95, 207, 182);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto .5em auto;
+}
+
+h5 {
+    color: rgb(155, 155, 155);
+    text-transform: uppercase;
+}
+
+p, li{
+    color: #9B9B9B;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+    padding: 16rem 0 18rem;
+    text-align: center;
+}
+
+.section-heading,
+.section-description {
+    margin-bottom: 1.2rem;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.home-header {
+    left: 0px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+.nav-item {
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1em 1.5em;
+    color: rgb(255, 255, 255) !important;
+    display: inline-block;
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 23px 0;
+    width: 100%;
+}
+.navbar-left {
+    visibility: hidden;
+    display: none;
+}
+.navbar-right {
+    display: none;
+}
+.navbar-logo {
+    text-align: center;
+}
+.signup {
+    margin: 0 2em;
+    background-color: rgb(95, 207, 182);
+    padding: .6em 1.5em;;
+    -webkit-border-radius: 20px;
+    border-radius: 25px;
+    display: inline-block;
+}
+.signup:hover {
+    color: rgb(95, 207, 182) !important;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px rgb(95, 207, 182);
+    cursor: pointer;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.hero {
+  background-image: url('http://static.swellist.com/images/faq-hero-2x.png');
+  background-size: cover;
+  background-position: center center;
+  }
+
+/* Sticky Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.site-header {
+    display: none;
+    height: 0;
+    padding: 1em 0;
+    margin: 0 0 1em 0;
+}
+
+header.sticky-nav {
+    height: 100px;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 1px 2px rgba(68, 68, 68, 0.35); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 0px 1px 2px rgba(68, 68, 68, 0.35); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 1px 2px rgba(68, 68, 68, 0.35); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    text-align: center;
+}
+
+header.sticky-nav nav ul li {
+    display: inherit;
+    margin: 1.5rem .75rem 1.25rem
+}
+
+.nav-vert-item {
+    display: none;
+}
+
+header li.signup {
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5em 3em;
+    color: rgb(255, 255, 255) !important;
+}
+
+.nav-logo {
+    color: rgb(155, 155, 155);
+    font-size: 18px;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+a.nav-logo:hover {
+    color: rgb(95, 207, 182);
+    border-bottom: 2px solid rgb(95, 207, 182);
+}
+
+/* Div Backgrounds
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.white-background {
+    /*padding: 2rem !important;*/
+    background-color: #ffffff;
+    margin-top: 3em !important;
+    margin-bottom: 6em !important;
+    text-align: center;
+}
+.last-div {
+    margin-bottom: 0 !important;
+}
+
+/* Intro
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#faq-questions {
+    text-align: center;
+}
+.question-group{
+    padding: 2rem 0 3rem 0;
+}
+.question-group p{
+    text-align: left;
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+    background: #4a4a4a;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 40px 40px 150px 40px;
+    z-index: 1;
+}
+
+.download-button {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em !important;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.download-button a {
+    margin-bottom: 1em;
+}
+
+footer ul {
+    margin: 0 0 1.5em 0;
+    padding-left: 0;
+    clear: both;
+    text-align: center;
+}
+
+footer li {
+    color: #ffffff;
+    font-size: 13px;
+    display: inline;
+    margin: 0.7em;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+.twitter {
+    background: url("/images/swellist/twitter-icon-white.svg") no-repeat center center;
+    height: 24px;
+    width: 24px;
+    text-indent: -9999px;
+    margin: 10px 10px 0px 0px;
+    cursor: pointer;
+    color: transparent;
+}
+
+.facebook {
+    background: url("/images/swellist/facebook-icon-white.svg") no-repeat center center;
+    height: 22px;
+    width: 22px;
+    text-indent: -9999px;
+    margin: 10px 10px 0px 10px;
+    color: transparent;
+}
+
+.pinterest {
+    background: url("/images/swellist/pinterest-icon-white.svg") no-repeat center center;
+    height: 22px;
+    width: 22px;
+    text-indent: -9999px;
+    margin: 10px 0px 0px 10px;
+    cursor: pointer;
+    color: transparent;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+}
+
+/* Larger than phablet (also point when grid becomes active) - Bigger than 550 */
+@media (min-width: 550px) {
+
+    /* Hero and Header
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .nav {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        align-items: center;
+        padding: 0 0 23px 0;
+        width: 100%;
+    }
+
+    .navbar-left {
+        visibility: visible;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .navbar-left >.nav-item {
+        padding-left: 3.5em;
+    }
+
+    .navbar-right {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+
+    .nav-container {
+        width: 100% !important;
+        max-width: 1400px !important;
+    }
+
+    .nav-item {
+        padding: 0px;
+    }
+
+    .section {
+        padding: 12rem 0 11rem;
+    }
+
+    .hero {
+        padding-bottom: 8rem;
+        text-align: left;
+        height: 165px;
+    }
+
+
+    /* Sticky Nav
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    header.sticky-nav nav {
+        padding-top: 2rem;
+    }
+
+    header.sticky-nav nav ul {
+        padding-left: 0;
+        margin: 0.5em 0;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 1.5rem .75rem 0rem;
+    }
+
+    .nav-vert-item {
+        display: inline;
+        color: rgb(155, 155, 155);
+        letter-spacing: 1px;
+        line-height: 42px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    a.nav-vert-item:hover {
+        color: rgb(95, 207, 182);
+        border-bottom: 2px solid rgb(95, 207, 182);
+    }
+
+    .nav-logo {
+        line-height: 42px;
+        white-space: nowrap;
+        margin-right: 1em;
+    }
+
+    a.nav-logo:hover {
+        color: rgb(95, 207, 182);
+        border-bottom: 2px solid rgb(95, 207, 182);
+    }
+
+    header li.signup {
+        padding: .7em 1.7em;
+    }
+    /* FAQS */
+    .white-background {
+        margin-top: 6em !important;
+    }
+    .faq-title {
+    padding-bottom: 2rem;
+    }
+
+}
+
+/* Larger than tablet - Bigger than 750 */
+@media (min-width: 750px) {
+    /* Hero and Nav*/
+    .hero {
+        height: 190px;
+    }
+
+    .hero-heading {
+        font-size: 2.4rem;
+    }
+
+    .section {
+        padding: 14rem 0 15rem;
+    }
+
+    .hero {
+        padding: 15rem 0 8rem;
+    }
+
+    .section-description {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 1.5rem .75rem 0rem;
+    }
+
+}
+
+/* Larger than desktop - Bigger than 1000 */
+@media (min-width: 1000px) {
+    .section {
+        padding: 20rem 0 19rem;
+    }
+
+    .hero {
+        padding: 15rem 0 10rem;
+    }
+
+    .hero-heading {
+        font-size: 2.6rem;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 0 1.5em;
+    }
+
+    .nav-item {
+        padding: 0 15px 0 0;
+    }
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+    .hero {
+        padding: 22rem 0 29rem;
+    }
+}
+
+/* ----------- My daughter, I suspect you are spoofing me. Why are you here? What do you want? -----------

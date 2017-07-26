@@ -1,0 +1,105 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Swellist"/>
+    <meta name="keywords" content="swell, swellist, productivity, self-help, organization, joy"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title> Swellist | Personalized Feed of Your Want-To-Dos</title>
+
+    <!-- libraries -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/wunderlist.sdk.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+    <!-- runtime vars -->
+    <script type="text/javascript">
+      API_URL = "{{apiURL}}";
+      WUNDERLIST_CLIENT_ID = "{{wunderlistClientId}}";
+      STRIPE_KEY = "{{stripePublishableKey}}"
+      USER_DASHBOARD_MESSAGE = "{{userDashboardMessage}}";
+      Stripe.setPublishableKey(STRIPE_KEY);
+    </script>
+
+    <!-- Fonts from Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300italic,300,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- bookmark favicons for apple devices -->
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/images/swellist/apple-touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/swellist/apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/swellist/apple-touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/swellist/apple-touch-icon-ipad-retina.png">
+
+    <!-- Swellist stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/normalize.css" />
+    <link rel="stylesheet" href="/stylesheets/swellist-feed.css" />
+    <link rel="stylesheet" href="/stylesheets/skel.min.css" />
+    <link rel="stylesheet" href="/stylesheets/font-awesome.css" />
+    <link rel="stylesheet" href="/stylesheets/Draft.css" />
+    <link rel="stylesheet" href="/stylesheets/RichEditor.css" />
+    <link rel="stylesheet" href="/stylesheets/react-pull-to-refresh.css" />
+
+    <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+mixpanel.init("4f65c8097814584ec4269a19b8aaacb8");</script>
+    <!-- end Mixpanel -->
+
+    <script type="text/javascript">
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        var viewProps = {};
+        var ref = getParameterByName("ref");
+        if( ref ) {
+            viewProps.ref = ref;
+        }
+        var campaign = getParameterByName("campaign");
+        if( campaign ) {
+            viewProps.campaign = campaign;
+        }
+        var uid = getParameterByName("uid");
+        var isImpersonating = uid && uid.length;
+        if( !isImpersonating ) {
+            mixpanel.track("Dashboard_View", viewProps);
+        }
+    </script>
+
+    <!-- GA Tracking -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-55350538-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- Begin Inspectlet Embed Code -->
+    <script type="text/javascript" id="inspectletjs">
+        window.__insp = window.__insp || [];
+        __insp.push(['wid', 634618853]);
+        (function() {
+            function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+            setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+        })();
+    </script>
+    <!-- End Inspectlet Embed Code -->
+</head>
+<body class="Site">
+<div id="react-root">
+
+</div>
+<script type="text/javascript" src="/js/swellist-dashboard.js"></script>
+</body>
+</html>

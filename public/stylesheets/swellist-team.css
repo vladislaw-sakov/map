@@ -1,0 +1,449 @@
+/*
+Website Name: Swellist Example
+Description: Get a continuous stream of personalized tips to help with your to-dos
+Author: Simple Labs Inc.
+URI: http://www.swellist.com/example
+Tags: Swellist, Responsive, Website, Landing Page
+*/
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+.swellist-logo {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-shadow: rgba(0, 0, 0, 0.309804) 0px 1px 1px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(95, 207, 182);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto .5em auto;
+}
+
+h2 {
+    color: #9B9B9B;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+h7 {
+    color: #5FCFB6;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+}
+p {
+    font-family: "Lora", Georgia, serif;
+    font-size: 1.7rem;
+    color: #4A4A4A;
+    line-height: 30px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+    padding: 9rem 0 12rem;
+    text-align: center;
+}
+
+.section-heading,
+.section-description {
+    margin-bottom: 1.2rem;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.home-header {
+    left: 0px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-item {
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1em 1.5em;
+    color: #5FCFB6;
+    display: inline-block;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 23px 0;
+    width: 100%;
+}
+
+.navbar-left {
+    visibility: hidden;
+    display: none;
+}
+.navbar-right {
+    display: none;
+}
+
+.navbar-logo {
+    text-align: center;
+}
+
+.signup {
+    margin: 0 2em;
+    background-color: rgb(95, 207, 182);
+    padding: .6em 1.5em;;
+    -webkit-border-radius: 20px;
+    border-radius: 25px;
+    display: inline-block;
+    color: rgb(255, 255, 255) !important;
+}
+
+.signup:hover {
+    color: rgb(95, 207, 182) !important;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px rgb(95, 207, 182);
+    cursor: pointer;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hero h1 {
+    text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.15);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 400; 
+    visibility: visible;
+    text-align: left;
+}
+
+.hero-example {
+    font-family: "Lora", Georgia, serif;
+    color: #FFF;
+    text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.15);
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 4.5rem;
+    line-height: 50px;
+    letter-spacing: 2.4px;
+    text-align: left;
+}
+
+
+/* Div Backgrounds
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.gray-background {
+    margin-bottom: 3em !important;
+    padding: 2rem !important;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+.white-background {
+    padding: 2rem !important;
+    background-color: #ffffff;
+    margin-top: 3em;
+    margin-bottom: 0em;
+    text-align: left !important;
+}
+.last-div {
+    margin-bottom: 0 !important;
+}
+
+
+/* SubNav
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#subnav {
+    text-align: center !important;
+}
+#subnav2 {
+    text-align: center !important;
+    margin-bottom: 3em;
+    margin-top: 0em;
+}
+.example-selected {
+    display: table;
+    margin-bottom:5px;
+    border-bottom: 2px solid;
+}
+
+
+/* Example Body 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#example-body {
+    padding-top: 8rem !important;
+}
+
+/* Testimonial 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#recommendations, #how, #largeCarousel {
+    margin: 8rem 0; 
+}
+.img-circle {
+    border-radius: 50%;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    height: 167px;
+}
+.title-text {
+    color: #9B9B9B;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.title-underline {
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid #D8D8D8;
+}
+
+/* Team 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.member-profile {
+    float: left;
+    width: 24%;
+    margin-right: 1%;
+    display: inline-block;
+    text-align: center;
+    font-size: 11px;
+}
+
+.member-profile img {
+    width: 100%;
+}
+
+.member-profile:last-child {
+    margin-right: 0%;
+}
+
+.member-name {
+    margin: 10px 0px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #4A4A4A;
+}
+
+.member-position {
+    margin: 5px 0px;
+    color: #9B9B9B;
+    font-family: "Lora", Georgia, serif;
+    font-size: 1.7rem;
+}
+
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+    background: #4a4a4a;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 40px 40px 150px 40px;
+    z-index: 1;
+}
+
+.heroImg-1 {
+    background-image: url('http://static.swellist.com/images/team/riobeach.jpg');
+}
+
+.heroImg-2 {
+    background-image: url('http://static.swellist.com/images/team/cook1.jpg');
+}
+
+.heroImg-3 {
+    background-image: url('http://static.swellist.com/images/team/healthy.jpg');
+}
+
+.heroImg-4 {
+    background-image: url('http://static.swellist.com/images/team/marathon.jpg');
+}
+
+.img-logo {
+    width: 24%;
+}
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+    .section {
+        padding: 12rem 0 5rem !important;
+        text-align: center;
+    }
+}
+
+/* Larger than phablet (also point when grid becomes active) - Bigger than 550 */
+@media (min-width: 550px) {
+
+    /* Hero and Header
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .nav {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        align-items: center;
+        padding: 0 0 23px 0;
+        width: 100%;
+    }
+    .navbar-left {
+        visibility: visible;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .navbar-left >.nav-item {
+        padding-left: 3.5em;
+    }
+
+    .navbar-right {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+
+    .nav-container {
+        width: 100% !important;
+        max-width: 1400px !important;
+    }
+
+    .nav-item {
+        padding: 0px;
+    }
+
+    .section {
+        padding: 12rem 0 5rem;
+    }
+
+    .hero {
+        padding: 7rem 0;
+        text-align: center !important;
+    }
+
+    .hero h1 {
+        font-size: 3.0rem;
+        visibility: visible;
+    }
+
+    .hero-container {
+        width: 90% !important;
+    }
+
+    .user-icon {
+        padding-right: 22px;
+    }
+
+}
+
+/* Larger than tablet - Bigger than 750 */
+@media (min-width: 750px) {
+    /* Hero and Nav*/
+    .hero {
+        padding: 7rem 0;
+    }
+
+    .section {
+        padding: 12rem 0 5rem;
+    }
+
+    .hero {
+        padding: 7rem 0 7rem;
+    }
+
+    .section-description {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .categories {
+        padding: 15rem 0 8rem;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 1.5rem .75rem 0rem;
+    }
+
+    /* Step by Step */
+    .container .white-background {
+        width: 100%
+    }
+
+}
+
+/* Larger than desktop - Bigger than 1000 */
+@media (min-width: 1000px) {
+    .section {
+        padding: 12rem 0 5rem;
+    }
+
+    .hero {
+        padding: 7rem 0;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 0 1.5em;
+    }
+
+    #carousel {
+        max-width: 2000px !important;
+    }
+
+    .nav-item {
+        padding: 0 15px 0 0;
+    }
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+    #carousel {
+        max-width: 2800px !important;
+    }
+}
+
+/* Smaller than desktop */
+@media (max-width: 768px) {
+    .img-logo {
+        width: 49%;
+    }
+
+    .member-profile {
+        width: 49%;
+    }
+}
+
+/* Smaller than 300 */
+@media (max-width: 360px) {
+
+    .member-profile {
+        width: 100%;
+    }
+}

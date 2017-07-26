@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Invite List</title>
+</head>
+<body>
+<span style="color:red">{{{message}}}</span>
+<form name="invite-code" method="post" action="/invite/bypass">
+    <h3>BYPASS WAITING LIST</h3>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="text" value="{{email}}"/><br/>
+    <label for="phone">Phone</label>
+    <input id="phone" name="phone" type="text" value="{{phone}}"/> (Format: +17182371283)<br/>
+    <label for="vip">VIP</label>
+    <input id="vip" name="vip" type="checkbox"/><br/>
+    <input type="submit"/>
+</form>
+<hr />
+<form name="invite-amount" method="post" action="/invite/amount">
+    <h3>INVITE # FROM LIST</h3>
+    <label for="amount">Invite next</label>
+    <input id="amount" name="amount" type="text" size="1" maxlength="4"/> out of {{queueTotal}} total waiting list applicants.<br/>
+    <input type="hidden" name="queueTotal" value="{{queueTotal}}" />
+    <input type="submit"/>
+</form>
+<hr />
+<form name="invite-specific" method="post" action="/invite/specific">
+    <h3>INVITE SPECIFIC APPLICANTS FROM LIST</h3>
+    <table border="1">
+        <tr align="center"><td>Select</td><td>Priority</td><td>Key</td><td>Created At</td><td>Source</td></tr>
+        {{#each applicants}}
+            <tr align="center"><td><input type="checkbox" name="{{key}}" /></td><td>{{priority}}</td><td><a href="https://api.fullcontact.com/v2/person.json?email={{key}}&apiKey=b7143d6076190cd8" target="_blank">{{key}}</a></td><td>{{created_at}}</td><td>{{source}}</td></tr>
+        {{/each}}
+    </table>
+    <input type="submit"/>
+</form>
+</body>
+</html>

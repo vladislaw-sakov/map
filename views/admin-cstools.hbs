@@ -1,0 +1,157 @@
+<html>
+<head>
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+    <script>
+         function submitUid() {
+            var uid = $('#uid').val();
+            if(!uid || uid.length == 0) {
+                alert("Please provide a User ID.");
+            } else {
+              $.ajax({
+                  url: '/user/' + uid + '/' + $('#uidAction').val(),
+                  type: 'DELETE',
+                  success: function(result) {
+                      alert('The operation was successful');
+                  },
+                  failure: function(result) {
+                      alert('The operation failed.');
+                  }
+              });
+            }
+         }
+
+         function submitUdid() {
+            var udid = $('#udid').val();
+            if(!udid || udid.length == 0) {
+                alert("Please provide a UDID.");
+            } else {
+              $.ajax({
+                  url: '/user/udid/' + udid + '/' + $('#udidAction').val(),
+                  type: 'DELETE',
+                  success: function(result) {
+                      alert('The operation was successful');
+                  },
+                  failure: function(result) {
+                      alert('The operation failed.');
+                  }
+              });
+            }
+         }
+
+    </script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <div id="topnav">
+        <a id="logo" href="/">Swell - CS Tools</a>
+        <a id="signout" href="/logout">Sign Out</a>
+    </div>
+    <div id="user-page-container">
+        <div id="content-container" class="container">
+            <h1>CS Tools</h1>
+            <hr/>
+            <h2>Add Content Creator</h2>
+            <form action="/persistence/addadmin" method="post" name="addadmin">
+                <label for="email">Email:</label>
+                <input id="email" type="text" name="email" />
+                <select name="role" >
+                    <option value="training">In Training</option>
+                    <option value="creator">Content Creator</option>
+                    <option value="taskmaster">Content Manager</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+            <hr/>
+            <h2>Clear Objects for user</h2>
+            <form id="uidcstools">
+                <table><tr>
+                    <td>User ID:</td>
+                    <td><input id="uid" type="text" name="uid" size="8"/></td>
+                    <td>
+                        <select id="uidAction">
+                            <option value="seenflags">Reset Seen Flags</option>
+                            <option value="tasksandtags">Delete Tags / Tasks</option>
+                        </select>
+                    </td>
+                    <td><input type="button" name="submit" value="Submit" onclick="submitUid();"/>
+                </tr></table>
+            </form>
+            <hr/>
+            <h2>Delete User by UDID</h2>
+            <form id="udidcstools">
+                <table><tr>
+                    <td>UDID:</td>
+                    <td><input id="udid" type="text" name="udid" size="32"/></td>
+                    <td>
+                        <select id="udidAction">
+                            <option value="cascade">Delete User</option>
+                        </select>
+                    </td>
+                    <td><input type="button" name="submit" value="Submit" onclick="submitUdid();"/>
+                </tr></table>
+            </form>
+            <hr/>
+
+            <h2>Get encrypted task key.</h2>
+            <form action="/encrypttaskkey" method="post">
+                <label for="taskKey">Task Key:</label>
+                <input id="taskKey" type="text" name="taskKey" />
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+            <hr>
+            <h2>Decrypt task key.</h2>
+            <form action="/decrypttaskkey" method="post">
+                <label for="encryptedKey">Encrypted Key:</label>
+                <input id="encryptedKey" type="text" name="encryptedKey" />
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+            <hr/>
+
+
+            <h2>Run Similar Tasks Upload.</h2>
+            <form action="/schedule/similartaskupload" method="post">
+                <label for="upload_time">Upload Time (optional):</label>
+                <input id="upload_time" type="text" name="upload_time" />
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+            <hr/>
+            <br/>
+            <a href="/worktimes">Download Worktimes For CCs/CMs</a>
+            <br/>
+            <hr/>
+            <h2>Reset an account with email</h2>
+            <form action="/resetemail" method="post">
+                <label for="resetemail">Email:</label>
+                <input id="resetemail" type="text" name="email" />
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+            <br/>
+            <hr/>
+            <h2>Disconnect Wunderlist User with UID</h2>
+            <form action="/resetwunderlist" method="post">
+                <label>UID:<input id="uid" type="text" name="uid" /></label>
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+            <br/>
+            <hr/>
+            <h2>Disconnect Wunderlist User with Email</h2>
+            <form action="/resetwunderlist" method="post">
+                <label>Email:<input id="uid" type="text" name="uid" /></label>
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+            <br/>
+            <!--
+            <hr></hr>
+            <h2>Nuke CCs/CMs</h2>
+            <form action="/nuke" method="post">
+                <input type="submit" name="submit" value="Submit"/>
+            </form>
+            -->
+            <hr>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,686 @@
+/*
+Website Name: Swellist - How
+Description: Get a continuous stream of personalized tips to help with your to-dos
+Author: Simple Labs Inc.
+URI: http://www.swellist.com/
+Tags: Swellist, Responsive, Website, Landing Page
+*/
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+.swellist-logo {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-shadow: rgba(0, 0, 0, 0.309804) 0px 1px 1px;
+    text-transform: uppercase;
+}
+
+
+h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(95, 207, 182);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto .5em auto;
+}
+
+h2 {
+    color: #9B9B9B;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+p, li{
+    color: #9B9B9B;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+    padding: 12rem 0 7rem;
+    text-align: center;
+}
+
+.section-heading,
+.section-description {
+    margin-bottom: 1.2rem;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.home-header {
+    left: 0px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+.nav-item {
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1em 1.5em;
+    color: rgb(255, 255, 255) !important;
+    display: inline-block;
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 23px 0;
+    width: 100%;
+}
+.navbar-left {
+    visibility: hidden;
+    display: none;
+}
+.navbar-right {
+    display: none;
+}
+.navbar-logo {
+    text-align: center;
+}
+.signup {
+    margin: 0 2em;
+    background-color: rgb(95, 207, 182);
+    padding: .6em 1.5em;;
+    -webkit-border-radius: 20px;
+    border-radius: 25px;
+    display: inline-block;
+}
+.signup:hover {
+    color: rgb(95, 207, 182) !important;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px rgb(95, 207, 182);
+    cursor: pointer;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.hero {
+  background-image: url('http://swellist-web.s3.amazonaws.com/images/hero-2x.png');
+  background-size: cover;
+  background-position: center center;
+  }
+
+.hero h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.15);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    visibility: visible;
+}
+
+h4.hero-heading {
+    font-family: "Lora", Georgia, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 1px 0px rgba(0, 0, 0, 0.15);
+    font-size: 2.0rem;
+    line-height: 30px;
+    margin-bottom: 4.0rem;
+}
+
+.phones {
+    position: relative;
+}
+
+.phone {
+    position: relative;
+    max-width: 80%;
+    margin: 3rem auto -5rem;
+}
+
+.phone + .phone {
+    display: none;
+}
+
+
+/* Sticky Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.site-header {
+    display: none;
+    height: 0;
+    padding: 1em 0;
+    margin: 0 0 1em 0;
+}
+
+header.sticky-nav {
+    height: 100px;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 1px 2px rgba(68, 68, 68, 0.35); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 0px 1px 2px rgba(68, 68, 68, 0.35); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 0px 1px 2px rgba(68, 68, 68, 0.35); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    text-align: center;
+}
+
+header.sticky-nav nav ul li {
+    display: inherit;
+    margin: 1.5rem .75rem 0rem
+}
+
+.nav-vert-item {
+    display: none;
+}
+
+header li.signup {
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5em 3em;
+    color: rgb(255, 255, 255) !important;
+}
+
+.nav-logo {
+    color: rgb(155, 155, 155);
+    font-size: 18px;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+a.nav-logo:hover {
+    color: rgb(95, 207, 182);
+    border-bottom: 2px solid rgb(95, 207, 182);
+}
+
+/* Div Backgrounds
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.gray-background {
+    margin-top: 6em;
+    margin-bottom: 6em;
+    padding-top: 6em !important;
+    padding-bottom: 6em !important;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+.white-background {
+    /*padding: 2rem !important;*/
+    background-color: #ffffff;
+    margin-top: 6em !important;
+    margin-bottom: 6em !important;
+    text-align: center;
+}
+.last-div {
+    margin-bottom: 0 !important;
+}
+
+/* Intro
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#intro {
+    text-align: center;
+}
+
+.intro-head {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(95, 207, 182);
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 4rem auto;
+}
+.intro-subtitle{
+    font-family: "Lora", Georgia, serif;
+    text-align: center;
+}
+
+
+
+/* ----------- Method ----------- */
+.method ul {
+    padding-left: 0;
+}
+
+.method li {
+    list-style: none;
+    margin-bottom: 8em;
+}
+
+.method li:last-child {
+    list-style: none;
+    margin-bottom: 4em;
+}
+
+.method button{
+    margin-bottom: 4em;
+    margin-top: 2em;
+}
+/* ----------- Tasks ----------- */
+img.web {
+    display: none;
+}
+.mobile-tasks {
+    display: inline;
+}
+.mobile-tasks{
+    display: inline;
+    max-width: 95%;
+}
+.mobile-left{
+    display: inline;
+    width: 95%;
+}
+.mobile-right{
+    display: inline;
+    width: auto;
+    padding-left: 22px;
+}
+.task-group {
+    margin: 1em auto 2em auto !important;
+}
+.task1-caption {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .5px;
+    text-align: left;
+    margin-top: -75px;
+    margin-left: 100px;
+    padding-bottom: 10px;
+}
+.task2-caption{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .5px;
+    text-align: left;
+    margin-top: -45px;
+    margin-left: 100px;
+}
+.task3-caption {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .5px;
+    text-align:left;
+    margin-top: -50px;
+    margin-left: 100px;
+}
+
+
+
+/* ----------- Habits ----------- */
+
+img.mobile-phone {
+    display: none;
+}
+img.lilphone {
+    max-width: 296px;
+}
+
+
+/* ----------- Recent Examples ----------- */
+
+#content div#recent-examples ul {
+    list-style: none;
+    padding-left: 0;
+    width: 50%;
+    margin: 1em auto 3em auto;
+    border-top: 1px solid #5fcfb6;
+}
+div#recent-examples ul li {
+    border-bottom: 1px solid #5fcfb6;
+    padding: 2em 0;
+    font-size: 20px;
+    font-family: "Lora", Georgia, serif;
+    list-style: none;
+}
+
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+    background: #4a4a4a;
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 40px 40px 150px 40px;
+    z-index: 1;
+}
+
+.download-button {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em !important;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.download-button a {
+    margin-bottom: 1em;
+}
+
+footer ul {
+    margin: 0 0 1.5em 0;
+    padding-left: 0;
+    clear: both;
+    text-align: center;
+}
+
+footer li {
+    font-size: 13px;
+    display: inline;
+    margin: 0.7em;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+}
+
+.twitter {
+    background: url("/images/swellist/twitter-icon-white.svg") no-repeat center center;
+    height: 24px;
+    width: 24px;
+    text-indent: -9999px;
+    margin: 10px 10px 0px 0px;
+    cursor: pointer;
+    color: transparent;
+}
+
+.facebook {
+    background: url("/images/swellist/facebook-icon-white.svg") no-repeat center center;
+    height: 22px;
+    width: 22px;
+    text-indent: -9999px;
+    margin: 10px 10px 0px 10px;
+    color: transparent;
+}
+
+.pinterest {
+    background: url("/images/swellist/pinterest-icon-white.svg") no-repeat center center;
+    height: 22px;
+    width: 22px;
+    text-indent: -9999px;
+    margin: 10px 0px 0px 10px;
+    cursor: pointer;
+    color: transparent;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+}
+
+/* Larger than phablet (also point when grid becomes active) - Bigger than 550 */
+@media (min-width: 550px) {
+
+    /* Hero and Header
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .nav {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        align-items: center;
+        padding: 0 0 23px 0;
+        width: 100%;
+    }
+
+    .navbar-left {
+        visibility: visible;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .navbar-left >.nav-item {
+        padding-left: 3.5em;
+    }
+
+    .navbar-right {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+
+    .nav-container {
+        width: 100% !important;
+        max-width: 1400px !important;
+    }
+
+    .nav-item {
+        padding: 0px;
+    }
+
+    .section {
+        padding: 12rem 0 11rem;
+    }
+
+    .hero {
+        padding-bottom: 24rem;
+        text-align: left;
+        height: 165px;
+    }
+
+    h4.hero-heading {
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 3.0rem;
+        visibility: visible;
+    }
+
+    .hero a.button {
+        float: left;
+    }
+
+    .phone {
+        position: absolute;
+        top: -7rem;
+        right: 3rem;
+        max-height: 362px;
+        z-index: 3;
+    }
+
+    .phone + .phone {
+        top: -6rem;
+        display: block;
+        max-width: 73.8%;
+        right: 0;
+        z-index: 2;
+        max-height: 338px;
+    }
+
+    .hero-heading {
+        font-size: 2.0rem;
+        line-height: 30px;
+    }
+
+    .hero-container {
+        width: 90% !important;
+    }
+
+    .hero h1 {
+        text-align: left;
+    }
+
+    /* Sticky Nav
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    header.sticky-nav nav {
+        padding-top: 2rem;
+    }
+
+    header.sticky-nav nav ul {
+        padding-left: 0;
+        margin: 0.5em 0;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 1.5rem .75rem 0rem;
+    }
+
+    .nav-vert-item {
+        display: inline;
+        color: rgb(155, 155, 155);
+        letter-spacing: 1px;
+        line-height: 42px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    a.nav-vert-item:hover {
+        color: rgb(95, 207, 182);
+        border-bottom: 2px solid rgb(95, 207, 182);
+    }
+
+    .nav-logo {
+        line-height: 42px;
+        white-space: nowrap;
+        margin-right: 1em;
+    }
+
+    a.nav-logo:hover {
+        color: rgb(95, 207, 182);
+        border-bottom: 2px solid rgb(95, 207, 182);
+    }
+
+    header li.signup {
+        padding: .7em 1.7em;
+    }
+    img.web {
+        display: inline;
+        width: 100%;
+    }
+    .mobile-tasks{
+        display: none;
+    }
+}
+
+/* Larger than tablet - Bigger than 750 */
+@media (min-width: 750px) {
+    /* Hero and Nav*/
+    .hero {
+        height: 190px;
+    }
+
+    .hero-heading {
+        font-size: 2.0rem;
+        line-height: 30px;
+    }
+
+    .section {
+        padding: 14rem 0 15rem;
+    }
+
+    .hero {
+        padding: 25rem 0 23rem;
+    }
+
+    .section-description {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .phone {
+        top: -14rem;
+        right: 5rem;
+        max-height: 510px;
+    }
+
+    .phone + .phone {
+        top: -12rem;
+        max-height: 472px;
+    }
+
+    .categories {
+        padding: 15rem 0 8rem;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 1.5rem .75rem 0rem;
+    }
+
+    /* Step by Step */
+    .container .white-background {
+        width: 100%
+    }
+
+    .step-by-step-list {
+        margin: 0 auto;
+        padding: 0 1em;
+        text-align: center;
+    }
+
+    .step-by-step-list img {
+        width: 75%;
+    }
+
+}
+
+/* Larger than desktop - Bigger than 1000 */
+@media (min-width: 1000px) {
+    .section {
+        padding: 20rem 0 19rem;
+    }
+
+    .hero {
+        padding: 23rem 0 23rem;
+    }
+
+    .hero-heading {
+        font-size: 2.0rem;
+        line-height: 30px;
+    }
+
+    .phone {
+        top: -14rem;
+        right: 5rem;
+        max-height: 510px;
+    }
+
+    .phone + .phone {
+        top: -12rem;
+        max-height: 472px;
+    }
+
+    header.sticky-nav nav ul li {
+        display: inline;
+        margin: 0 1.5em;
+    }
+
+    .nav-item {
+        padding: 0 15px 0 0;
+    }
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+
+}
+
+/* ----------- My daughter, I suspect you are spoofing me. Why are you here? What do you want? -----------

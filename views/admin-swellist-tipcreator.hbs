@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <!-- stylesheets-->
+    <link href="/stylesheets/tips.css" rel="stylesheet" />
+    <link href="/stylesheets/admindash.css" rel="stylesheet" />
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/Draft.css" />
+    <link rel="stylesheet" href="/stylesheets/RichEditor.css" />
+    <link rel="stylesheet" href="/stylesheets/react-datetime.css" />
+    <link rel="stylesheet" href="/stylesheets/rc-collapse.css" />
+
+    <!-- Fonts from Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- favicons -->
+    <link rel="icon" href="/images/admin-favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/admin-apple-touch-icon.png" />
+
+    <title>Swellist | Admin</title>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/wunderlist.sdk.js"></script>
+    <script type="text/javascript">
+      WUNDERLIST_ACCESS_TOKEN = "{{wunderlistAccessToken}}";
+      WUNDERLIST_CLIENT_ID = "{{wunderlistClientId}}";
+      UID = "{{uid}}";
+      API_URL = "{{apiUrl}}";
+      VANITY_URL = "{{vanityUrl}}";
+    </script>
+</head>
+<body>
+<div id="react-root">
+</div>
+<script type="text/javascript" src="/js/admin-userdashboard-view.js"></script>
+</body>
+</html>

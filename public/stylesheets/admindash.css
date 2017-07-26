@@ -1,0 +1,430 @@
+/*Wunderlist AdminDash Style v.1 */
+
+body {
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    background-color: #FFF !important;
+    margin: 0;
+}
+.headBar {
+    background-color: #fff;
+    width:100%;
+    padding: 15px;
+}
+.headBar p {
+    font-size: 0.95em;
+}
+.completed-task {
+    text-decoration: line-through;
+}
+svg {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+}
+path.slice{
+    stroke-width:2px;
+}
+
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+h1 {
+    font-family: inherit;
+    font-weight: 700;
+    margin: .67em 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: inherit;
+    letter-spacing: -.01em;
+}
+h2 {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+h3 {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-top: .5em;
+    margin-right: 0;
+    margin-bottom: .5em;
+    margin-left: 0;
+    line-height: 1.45;
+}
+
+p {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-top: .5em;
+    margin-right: 0;
+    margin-bottom: .5em;
+    margin-left: 0;
+    line-height: 1.45;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+td,
+th {
+    padding: 5px;
+}
+.hidden {
+    visibility:hidden;
+}
+
+/* Header */
+header {
+    padding: 5px 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1002;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 1em;
+    position: relative;
+    background-color: #5FCFB6 !important;
+}
+.nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color:white;
+    letter-spacing: 5px;
+    font-weight: 400;
+    text-shadow: rgba(0, 0, 0, 0.309804) 0px 1px 1px;
+}
+.back-button {
+    color: white;
+    margin-top: 14px;
+    position:absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-shadow: rgba(0, 0, 0, 0.309804) 0px 1px 1px;
+}
+.next-button {
+    color: white;
+    margin-top: 14px;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-shadow: rgba(0, 0, 0, 0.309804) 0px 1px 1px;
+    text-align: right;
+}
+.nav-icon{
+    font-size: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.headBar p{
+    text-align: center;
+}
+#username {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+.float-right {
+    float: right;
+}
+.user-data {
+    padding-top: 30px;
+}
+.admin-notes {
+    max-height: 250px;
+    overflow-y: scroll;
+}
+/* END Header */
+
+/* Button Bar */
+.buttonBar {
+    width:100%;
+    padding: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: thin solid #D8D8D8;
+}
+.noborder{
+    border-bottom: none;
+}
+.buttonBar button{
+    color: #5FCFB6 !important;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.buttonBar button.btn-success{
+    color: #fff !important;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+.buttonBar-row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+/* END Button Bar*/
+
+/* Create */
+.tab-headers {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #ddd;
+}
+.nav-tabs > li.active > a.tab-headers {
+    color: #5FCFB6 !important;
+}
+.bots-container {
+    margin-top: 30px;
+}
+li.disabled, h3.panel-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.send-button {
+    float: right;
+    margin-top: -7px;
+}
+.send-group{
+    padding:15px !important;
+}
+.list-group-heading{
+    color: #4A4A4A;
+}
+/* END Create */
+/* barChart Styling*/
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.bar {
+    fill: #5d3B56;
+}
+
+.bar:hover {
+    fill: #00FFb3 ;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+/* Tip Creator View */
+.tip-creator-preview {
+    font-family: "PT Sans";
+    background-color: #ffffff;
+    height:550px;
+    overflow: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.tip-creator-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+}
+.check-label{
+    margin-left: 10px;
+}
+.tipButtonRow{
+    margin-bottom: 10px;
+}
+.tipButtons{
+    margin: 1% 1% 5% 1%;
+}
+.tipButtons button{
+    margin-right: 1%;
+    margin-left: 1%;
+}
+.tip-creator-preview{
+    padding-right: 4px;
+    padding-left: 4px;
+}
+.tip-creator-preview  p{
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "PT Sans";
+    min-height: 100px;
+    max-height: 500px;
+    overflow: auto;
+
+}
+.tip-creator-preview img{
+    width: 300px;
+    padding: 20px;
+}
+.tip-creator-preview ul{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.tip-creator-scraped-image {
+  height: 100px;
+  width: auto;
+  cursor: pointer;
+}
+.img-selected{
+    border: 5px solid #5FCFB6 !important;
+}
+.tip-creator-preview li{
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "PT Sans";
+}
+.safari-phone-outer{
+    margin-top: 30px;
+    background-color:  #F2F2F2;
+    width: 375px;
+    height: 667px;
+    z-index: 2;
+}
+.tip-creator-preview-container {
+    position: relative;
+    width: 375px;
+    height: 100%;
+    top: 4px;
+    overflow-y: scroll;
+    z-index: 1;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+.tip-creator-form-container {
+    width: 40%;
+    margin-top: 30px;
+}
+.tip-creator-object-selector-container {
+    margin-top: 30px;
+}
+.stream-object-selector {
+    width: 96%;
+    max-height: 630px;
+    overflow-y: scroll;
+    margin-top: 15px;
+}
+.stream-object-selector tr {
+    cursor: hand;
+/*    border: 1pt solid black;*/
+}
+.stream-object-selector td {
+/*    padding: 10px;*/
+}
+.stream-object-selector-row {
+    font-size: 12px;
+}
+.input-group{
+    margin-bottom: 10px;
+}
+.user-feedback-admin {
+    margin-top: 1em;
+}
+
+/* END Tip Creator View */
+
+.headerInsight{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Notepad View */
+
+.notepad-view {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 200px;
+    padding: 10px;
+    background-color: white;
+    font-family: "Courier New", Courier, monospace;
+    color: #4A4A4A;
+}
+
+
+/* End Notepad View */
+
+/* Footer */
+
+footer {
+    padding: 5px 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1002;
+    top: 0;
+    left: 0;
+    bottom: 10;
+    width: 100%;
+    line-height: 1em;
+    position: relative;
+    background-color: black !important;
+}
+/* barChart Styling*/
+
+.bottom-align-text {
+    position: absolute;
+    bottom: -56 !important;
+    left: 70 !important;
+}
+.row {
+    position: relative;
+}

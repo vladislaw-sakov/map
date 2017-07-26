@@ -1,0 +1,53 @@
+{
+  "quizConfigs": {
+    "z8O3tE": {
+      "friendlyName": "Premium Free Trial Onboarding"
+    },
+    "SUmjGU": {
+      "friendlyName": "Premium Profile"
+    },
+    "ZDWSsU": {
+      "friendlyName": "Premium Onboarding"
+    },
+    "EL7VfM": {
+      "friendlyName": "Mega Quiz"
+    },
+    "EPf23h": {
+      "friendlyName": "Onboarding"
+    },
+    "YXSviA": {
+      "friendlyName": "Upload List"
+    },
+    "sMxukk": {
+      "friendlyName": "Enter More Tasks"
+    },
+    "PPt4il": {
+      "friendlyName": "Profile - Control",
+      "placement": "profile"
+    },
+    "gWR1pk": {
+      "friendlyName": "Profile - Running",
+      "campaign": "goal_running",
+      "placement": "profile"
+    },
+    "PGIqo7":{
+      "friendlyName": "Profile - Productivity",
+      "campaign": "goal_productivity",
+      "placement": "profile"
+    },
+    "XvnVwA": {
+      "friendlyName": "Onboarding - Control",
+      "placement": "onboarding"
+    },
+    "cDBkJO": {
+      "friendlyName": "Onboarding - Productivity",
+      "campaign": "goal_productivity",
+      "placement": "onboarding"
+    },
+    "Ba4KKi": {
+      "friendlyName": "Onboarding - Running",
+      "campaign": "goal_running",
+      "placement": "onboarding"
+    }
+  }
+}

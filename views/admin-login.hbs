@@ -1,0 +1,24 @@
+<html>
+<head>
+    <link href="/stylesheets/admin-style.css" rel="stylesheet"></link>
+</head>
+<body id="admin-gate">
+
+    <div id="form-container">
+        <form id="login" action="/login" method="post">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="text" name="username" id="username" class="large"></input>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="large"></input>
+             </div>
+           <button type="submit" class="btn btn-ruby btn-lg">Sign In</button>
+        </form>
+        <div id="login-options">
+            <a href="/forgotpassword">Forgot password</a>
+        </div>
+    </div>
+</body>
+</html>

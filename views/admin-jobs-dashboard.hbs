@@ -1,0 +1,150 @@
+<html>
+<head>
+  <script src="/js/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+  <script type="text/javascript">
+    function setNotStarted() {
+      $.ajax('/jobs/action', {
+        "method": 'POST',
+        "data": {
+          "action": "retryHungJobs"
+        },
+        "success": function(data, textStatus, jqXHR) {
+          console.log("success");
+        },
+        "error": function(jqXHR, textStatus, error) {
+          console.log(error.message);
+        }
+      });
+    }
+    function retryJob(jobId, runAt) {
+      $.ajax('/job/'+jobId+'/action', {
+        "method": 'PUT',
+        "data": {
+          "jobId": jobId,
+          "action": "run",
+          "runAt": runAt
+        }
+      });
+    }
+    function setJobHung(jobId) {
+      $.ajax('/job/'+jobId+'/status', {
+        "method": 'POST',
+        "data": {
+          "jobId": jobId,
+          "status": 0
+        }
+      });
+    }
+    function populateJobsTable(bodyId, jobs, showRetry) {
+      if( !jobs || jobs.length < 1) {
+        return;
+      }
+      jobs = jobs.sort(function(a, b){
+        return parseInt(b.run_at.N) - parseInt(a.run_at.N);
+      });
+      for(var i = 0; i<jobs.length; i++) {
+        var job = jobs[i];
+        var tr= $("<tr>");
+        tr.append("<td>"+ job.service.S +"</td>");
+        tr.append("<td>"+ job.key.N +"</td>");
+        tr.append("<td>"+ job.last_update.N +"</td>");
+        tr.append("<td>"+ job.params.S +"</td>");
+        tr.append("<td>"+ job.failure_count.N +"</td>");
+        var friendlyRunTime = moment(parseInt(job.run_at.N)*1000).calendar();
+        tr.append("<td>"+ friendlyRunTime +"</td>");
+        tr.append("<td>"+ job.status.N +"</td>");
+
+        if( showRetry ) {
+            tr.append("<td><button onclick=\"retryJob("+ job.key.N +", "+ job.run_at.N +");\">Retry</button></td>");
+        }
+        var tbody = $(bodyId);
+        tbody.append(tr);
+      }
+    }
+    $().ready(function(){
+      $.ajax('/jobs/status/1', {
+        "metod": 'GET',
+        "success": function(data, textStatus, jqXHR) {
+          if( data && data.length ) {
+            populateJobsTable("#in-progress-tbody", data, true);
+            $('#in-progress-header').html(data.length + " Jobs In Progress");
+          }
+        }
+      });
+      $.ajax('/jobs/status/2', {
+        "metod": 'GET',
+        "success": function(data, textStatus, jqXHR) {
+          if( data && data.length ) {
+            populateJobsTable("#failed-tbody", data, true);
+            $('#failed-header').html(data.length + " Jobs Failed");
+          }
+        }
+      });
+      $.ajax('/jobs/status/3', {
+        "metod": 'GET',
+        "success": function(data, textStatus, jqXHR) {
+          if( data && data.length ) {
+            populateJobsTable("#success-tbody", data, false);
+            $('#success-header').html(data.length + " Jobs In Finished");
+          }
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <label>Set in progress jobs as not started so they can retry.<button onclick="setNotStarted();">Retry</button></label>
+  <hr/>
+  <div id="in-progress-header">In Progress</div>
+  <table>
+    <thead>
+      <tr>
+        <td>service</td>
+        <td>job id</td>
+        <td>last update</td>
+        <td>params</td>
+        <td>failure count</td>
+        <td>run at</td>
+        <td>status</td>
+      </tr>
+    </thead>
+    <tbody id="in-progress-tbody">
+    </tbody>
+  </table>
+  <hr/>
+  <div id="failed-header">Failed</div>
+  <table>
+    <thead>
+      <tr>
+        <td>service</td>
+        <td>job id</td>
+        <td>last update</td>
+        <td>params</td>
+        <td>failure count</td>
+        <td>run at</td>
+        <td>status</td>
+      </tr>
+    </thead>
+    <tbody id="failed-tbody">
+    </tbody>
+  </table>
+  <hr/>
+  <div id="success-header">Failed</div>
+  <table>
+    <thead>
+      <tr>
+        <td>service</td>
+        <td>job id</td>
+        <td>last update</td>
+        <td>params</td>
+        <td>failure count</td>
+        <td>run at</td>
+        <td>status</td>
+      </tr>
+    </thead>
+    <tbody id="success-tbody">
+    </tbody>
+  </table>
+</body>
+</html>
